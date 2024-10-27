@@ -5,6 +5,7 @@ import (
 	"fmt"
 	gola "github.com/paulus-otto-harman/golang-module"
 	"homework/util"
+	view "homework/view/room"
 )
 
 type Room struct {
@@ -25,13 +26,13 @@ func (screen *Room) Render(ctx context.Context) int {
 	case 0:
 		return 0
 	case 1:
-		gola.Wait("Tambah Data Kamar")
+		Render(&view.CreateRoom{}, ctx)
 	case 2:
-		gola.Wait("Hapus Data Kamar")
+		Render(&view.DeleteRoom{}, ctx)
 	case 3:
-		gola.Wait("Ubah Data Kamar")
+		Render(&view.UpdateRoom{}, ctx)
 	case 4:
-		gola.Wait("Tambah Data Kamar")
+		Render(&view.RetrieveRoom{}, ctx)
 	}
 	return -1
 }

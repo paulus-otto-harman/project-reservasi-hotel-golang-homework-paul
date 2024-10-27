@@ -15,6 +15,8 @@ func (home *Home) Render(ctx context.Context) int {
 	util.H1("Menu Utama")
 	fmt.Println("[1] Kelola Kamar")
 	fmt.Println("[2] Reservasi")
+	//fmt.Println("[3] Kelola Pelanggan")
+	//fmt.Println("[4] Fasilitas Hotel")
 
 	fmt.Println()
 	fmt.Println("[0] Logout")
@@ -27,7 +29,7 @@ func (home *Home) Render(ctx context.Context) int {
 	case 1:
 		Render(&Room{}, ctx)
 	case 2:
-		Render(&Room{}, ctx)
+		Render(&Reservation{}, ctx)
 	}
 	return -1
 }
