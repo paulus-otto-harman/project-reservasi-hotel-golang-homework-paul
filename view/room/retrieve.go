@@ -1,10 +1,16 @@
 package view
 
-import "context"
+import (
+	"context"
+	gola "github.com/paulus-otto-harman/golang-module"
+	"homework/util"
+)
 
 type RetrieveRoom struct {
 }
 
 func (screen *RetrieveRoom) Render(ctx context.Context) int {
-	return -1
+	util.H1("Daftar Kamar")
+	gola.Wait("Tekan sembarang tombol untuk kembali ke menu Kelola Data Kamar")
+	return 0
 }

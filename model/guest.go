@@ -1,7 +1,8 @@
 package model
 
-type Room struct {
+type Guest struct {
 	Id        int    `json:"id"`
-	Number    string `json:"number"`
+	Name      string `json:"name"`
+	Phone     string `json:"phone"`
 	CreatedAt string `json:"created_at"`
 }
